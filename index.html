@@ -35,47 +35,110 @@
     .sticky-bar{position:fixed;left:0;right:0;bottom:0;background:linear-gradient(0deg,rgba(0,0,0,.08),rgba(0,0,0,0)),var(--cream);border-top:2px solid var(--steel);padding:10px;display:flex;gap:10px;justify-content:center;z-index:50}
     .sticky-bar a{flex:1;max-width:480px}
     .divider{height:10px;background:linear-gradient(90deg,var(--brick),var(--steel));border-radius:8px;opacity:.9;margin:22px 0}
-    form label{display:block;margin-top:12px;font-weight:700}
-    form input, form textarea{width:100%;padding:8px;border:2px solid var(--steel);border-radius:8px;margin-top:6px}
-    form input[type="checkbox"]{width:auto;margin-right:8px}
-    form button{margin-top:16px;padding:10px 14px;font-weight:700;background:var(--brick);color:#fff;border:none;border-radius:10px;cursor:pointer}
+    form label{display:block;margin-top:16px}
+    input,textarea{width:100%;padding:10px;margin-top:4px;border:1px solid #ccc;border-radius:6px;font-family:inherit;font-size:16px}
+    input[type="checkbox"]{width:auto;margin-right:8px}
+    button{margin-top:20px;background:var(--brick);color:white;border:none;padding:12px 20px;border-radius:10px;font-weight:700;font-size:16px;cursor:pointer}
   </style>
 </head>
 <body>
-  <!-- existing header and sections preserved -->
+  <header>
+    <div class="wrap brand">
+      <h1>Curbside Auto Care</h1>
+      <span class="badge">Lubbock, TX · Veteran-Owned</span>
+      <div style="flex-basis:100%"></div>
+      <div class="tag">Service Wherever You’re Parked</div>
+      <nav class="cta">
+        <a class="btn primary" href="tel:+18065529117">Call: 806-552-9117</a>
+        <a class="btn alt" href="sms:+18065529117">Text Us</a>
+        <a class="btn" href="mailto:curbsideac@gmail.com">Email Us</a>
+      </nav>
+    </div>
+  </header>
 
   <main class="wrap">
-    <!-- all previous content above -->
+    <section>
+      <h2>Honest Mobile Service</h2>
+      <p class="lead">We come to your driveway or workplace parking lot. Transparent pricing, clear estimates, and no waiting room.</p>
+      <div class="divider"></div>
+      <div class="grid two">
+        <div>
+          <h3>Service Area</h3>
+          <p><strong>Within Lubbock city limits:</strong> no travel charge.</p>
+          <p><strong>Outside city limits:</strong> +$25 travel fee.</p>
+        </div>
+        <div>
+          <h3>Hours</h3>
+          <p>Mon–Sat • 8:00a–6:00p (after-hours by availability)</p>
+        </div>
+      </div>
+    </section>
 
-    <section id="contact-form">
-      <h2>Contact Form</h2>
-      <form action="mailto:curbsideac@gmail.com" method="post" enctype="text/plain">
-        <label for="name">Your Name</label>
-        <input type="text" id="name" name="name" required>
+    <section id="pricing">
+      <h2>Standard Pricing Structure</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Category</th><th>Description</th><th>Rate / Rule</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Call-Out / Minimum</strong></td><td>Covers travel + first 30 minutes labor</td><td>$50 flat minimum</td></tr>
+            <tr><td><strong>Ongoing Labor</strong></td><td>After first 30 minutes</td><td>$25 per 15 minutes</td></tr>
+            <tr><td><strong>Parts Sourcing Fee</strong></td><td>If I must go buy or pick up your parts</td><td>+$25 flat</td></tr>
+            <tr><td><strong>After-Hours / Emergency</strong></td><td>Jobs outside normal hours (if available)</td><td>+$100 charge</td></tr>
+            <tr><td><strong>Travel (Outside Lubbock)</strong></td><td>Beyond city limits</td><td>+$25 flat</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-        <label for="email">Your Email</label>
-        <input type="email" id="email" name="email" required>
+    <section id="jobs">
+      <h2>Common Jobs & Estimates</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Service</th><th>Typical Time</th><th>Customer Estimate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Battery Replacement</strong></td><td>15–20 min</td><td>$50 flat</td></tr>
+            <tr><td><strong>Headlight / Bulb</strong></td><td>10–20 min</td><td>$50 flat</td></tr>
+            <tr><td><strong>Wiper Blades</strong></td><td>10–15 min</td><td>$50 flat</td></tr>
+            <tr><td><strong>Oil Change (5 qt std.)</strong></td><td>45–60 min</td><td>$75–$100</td></tr>
+            <tr><td><strong>Brake Pads (Front or Rear)</strong></td><td>1.25–1.5 hr</td><td>$125–$150</td></tr>
+            <tr><td><strong>Coolant Drain & Fill</strong></td><td>1.5–2 hr</td><td>$150–$200</td></tr>
+            <tr><td><strong>Alternator Replacement</strong></td><td>1.5–2 hr</td><td>$150–$200</td></tr>
+            <tr><td><strong>Starter Replacement</strong></td><td>1.25–1.75 hr</td><td>$125–$175</td></tr>
+            <tr><td><strong>Belt Replacement</strong></td><td>30–45 min</td><td>$75–$100</td></tr>
+            <tr><td><strong>Diagnostic / Multi-Task</strong></td><td>Varies</td><td>$100–$200</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-        <label for="phone">Your Phone</label>
-        <input type="tel" id="phone" name="phone" required>
+    <section id="contact">
+      <h2>Book Service / Get a Quote</h2>
+      <p>Fastest response: <a href="sms:+18065529117">text 806-552-9117</a><br>Or email us directly at <a href="mailto:curbsideac@gmail.com">curbsideac@gmail.com</a><br>Or call us at <a href="tel:+18065529117">806-552-9117</a></p>
+    </section>
 
-        <label for="message">Your Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <label><input type="checkbox" name="optin" required> I give permission to receive messages from Curbside Auto Care regarding my inquiry or service request.</label>
-
-        <button type="submit">Send Message</button>
+    <section id="form">
+      <h2>Request Service via Form</h2>
+      <form method="POST" action="https://formspree.io/f/mnqeygke">
+        <label>Name:<input type="text" name="name" required></label>
+        <label>Email:<input type="email" name="email" required></label>
+        <label>Phone:<input type="tel" name="phone" required></label>
+        <label>Service Details:<textarea name="message" rows="4" required></textarea></label>
+        <label><input type="checkbox" name="consent" required>I consent to receive responses by text or email from Curbside Auto Care.</label>
+        <button type="submit">Submit Request</button>
       </form>
     </section>
 
     <section id="privacy">
       <h2>Privacy Policy</h2>
       <p>We only use information you provide (name, phone, email, service details) to respond to your inquiries and schedule service. We do not sell, rent, or share personal information with third parties.</p>
-      <p>Messages sent by text, call, or email are kept confidential and used solely for Curbside Auto Care business. By submitting our form, you agree to receive service-related messages. You can opt out at any time. For any privacy questions, contact <a href="mailto:curbsideac@gmail.com">curbsideac@gmail.com</a>.</p>
+      <p>Messages sent by text, call, or email are kept confidential and used solely for Curbside Auto Care business. For any privacy questions, contact <a href="mailto:curbsideac@gmail.com">curbsideac@gmail.com</a>.</p>
     </section>
   </main>
 
-  <!-- existing sticky bar and footer -->
   <div class="sticky-bar">
     <a class="btn alt" href="sms:+18065529117">Text 806-552-9117</a>
     <a class="btn primary" href="tel:+18065529117">Call Now</a>
